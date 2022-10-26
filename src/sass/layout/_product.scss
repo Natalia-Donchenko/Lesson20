@@ -1,0 +1,103 @@
+.product {
+  &__container {
+    display: flex;
+    padding-top: 111px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    position: relative;
+    padding: 60px 40px 60px;
+    flex: 1 1 calc(50% - 20px);
+
+    &-text {
+      position: relative;
+      right: 0;
+      left: 50%;
+      display: flex;
+      max-width: 50%;
+      flex-direction: column;
+
+      h4 {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 35px;
+      }
+
+      p {
+        margin-bottom: 11px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        opacity: 0.7;
+      }
+
+      &_price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 11px;
+        gap: 10px;
+        color: #F6762C;
+        font-weight: 500;
+
+        &-primary {
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 0.1em;
+        }
+
+        &-secondary {
+          font-size: 14px;
+          line-height: 19px;
+          letter-spacing: 0.1em;
+          text-decoration-line: line-through;
+          opacity: 0.5;
+        }
+      }
+
+      & .btn {
+        padding: 13px 25px;
+
+        a {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+}
+
+.dairy_queen {
+  background: url(img/main/product_section/dairy_queen.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pizza_hut {
+  background: url(img/main/product_section/pizza_hut.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.burger_ling {
+  background: url(img/main/product_section/burger_king.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.papa_johns {
+  background: url(img/main/product_section/papa_johns.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text_reverse {
+  left: 0;
+  right: 50%;
+}

@@ -1,0 +1,21 @@
+.btn {
+  width: max-content;
+  height: max-content;
+  padding: 15px 36px;
+  background-color: #F6762C;
+  border-radius: 5px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: transform 0.1s linear;
+
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+  }
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}

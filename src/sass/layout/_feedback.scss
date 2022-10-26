@@ -1,0 +1,150 @@
+.feedback {
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 146px;
+    padding-bottom: 146px;
+  }
+
+  &__faces {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 346px;
+    width: 346px;
+    border: 1px dashed rgb(246, 118, 44, 0.3);
+    border-radius: 50%;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 1px dashed rgb(246, 118, 44, 0.3);
+      border-radius: 50%;
+      transform: scale(0.7);
+    }
+
+    .face {
+      position: absolute;
+      width: 85px;
+      height: 85px;
+      overflow: hidden;
+      border-radius: 50%;
+
+      img {
+        object-fit: cover;
+        position: absolute;
+      }
+
+      &_left-top {
+        top: 30px;
+        left: -25px;
+
+        img {
+          width: 85px;
+          height: 85px;
+        }
+      }
+
+      &_center {
+        width: 112px;
+        height: 112px;
+        box-shadow: 0 0 18.5px 30px rgb(246, 118, 44, 0.2);
+
+        img {
+          width: 250px;
+          height: 250px;
+          top: -60px;
+          left: -70px;
+        }
+      }
+
+      &_right-top {
+        width: 71px;
+        height: 71px;
+        top: -15px;
+        right: 40px;
+
+        img {
+          width: 71px;
+          height: 71px;
+        }
+      }
+
+      &_left-bottom {
+        width: 77px;
+        height: 77px;
+        bottom: -20px;
+        left: 40px;
+
+        img {
+          width: 77px;
+          height: 77px;
+        }
+      }
+
+      &_right-bottom {
+        width: 75px;
+        height: 75px;
+        right: -20px;
+        bottom: 40px;
+
+        img {
+          width: 75px;
+          height: 75px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    max-width: 40%;
+
+    &-quotes {
+      position: relative;
+      width: 43px;
+      height: 43px;
+      margin-bottom: 37px;
+      border-radius: 50%;
+      background-color: rgb(246, 118, 44, 0.1);
+
+      svg {
+        position: relative;
+        top: 15px;
+        right: 5px;
+      }
+    }
+
+    p {
+      margin-bottom: 27px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      opacity: 0.7;
+    }
+
+    &-name {
+      margin-bottom: 2px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &-suptitle {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      opacity: 0.7;
+      text-transform: uppercase;
+    }
+  }
+}
