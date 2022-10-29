@@ -1,7 +1,18 @@
+@use '../abstracts/mixins' as *;
+
 .food-list__cards {
   display: flex;
   padding: 101px 0;
   gap: 31px;
+  flex-wrap: wrap;
+
+  @include tablet {
+    padding: 50px 0;
+  }
+
+  @include mobile {
+    padding: 30px 0;
+  }
 
   .card {
     padding: 35px 11px;
@@ -9,9 +20,17 @@
     border-radius: 10px;
     overflow: hidden;
     object-fit: contain;
-    flex: calc(25% - 31px);
+    flex: 1 1 calc(25% - 31px);
     text-align: center;
     transition: transform 0.3s linear;
+
+    @include tablet {
+      flex: 1 1 calc(50% - 31px);
+    }
+
+    @include mobile {
+      flex: 1 1 calc(100% - 31px);
+    }
 
     &__img {
       margin-top: -35px;
@@ -19,7 +38,7 @@
       margin-left: -11px;
 
       img {
-        max-width: calc(100% + 11px);
+        width: calc(100% + 11px);
       }
     }
 
@@ -40,6 +59,10 @@
     &:hover {
       transform: scale(1.2);
       cursor: pointer;
+
+      @include tablet {
+        transform: scale(1.05);
+      }
     }
   }
 }

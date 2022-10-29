@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .order {
   background-color: #312F30;
 
@@ -6,13 +8,16 @@
     padding: 43px 30px;
     gap: 127px;
     animation: orderText 2s linear;
-  }
 
-  &__container {
-    display: flex;
-    padding: 43px 30px;
-    gap: 127px;
-    animation: orderText 2s linear;
+    @include tablet {
+      padding: 35px 15px;
+      gap: 20px;
+    }
+
+    @include mobile {
+      padding: 0 10px 30px;
+      flex-direction: column;
+    }
   }
 
   &__burger {
@@ -29,11 +34,22 @@
     flex-direction: column;
     max-width: 371px;
 
+    @include mobile {
+      text-align: center;
+      align-items: center;
+    }
+
     & h2 {
       margin-bottom: 24px;
       font-weight: 500;
       font-size: 44.2px;
       line-height: 52px;
+
+      @include tablet {
+        margin-bottom: 12px;
+        font-size: 25px;
+        line-height: 20px;
+      }
     }
 
     & p {
@@ -42,6 +58,12 @@
       font-size: 16px;
       line-height: 19px;
       opacity: 0.7;
+
+      @include tablet {
+        margin-bottom: 6px;
+        font-size: 12px;
+        line-height: 15px;
+      }
     }
 
     .price {
@@ -52,10 +74,19 @@
       margin-bottom: 13px;
       font-weight: 500;
 
+      @include tablet {
+        margin-bottom: 3px;
+      }
+
       &-primary {
         font-size: 20px;
         line-height: 23px;
         letter-spacing: 0.1em;
+
+        @include tablet {
+          font-size: 15px;
+          line-height: 20px;
+        }
       }
 
       &-secondary {
@@ -64,7 +95,20 @@
         letter-spacing: 0.1em;
         text-decoration-line: line-through;
         opacity: 0.5;
+
+        @include tablet {
+          font-size: 12px;
+          line-height: 17px;
+        }
       }
     }
+  }
+}
+
+@include tablet {
+  .order__text .btn {
+    padding: 10px 18px;
+    font-size: 10px;
+    line-height: 12px;
   }
 }

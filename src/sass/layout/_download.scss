@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .download {
   background-color: #312F30;
 
@@ -6,11 +8,31 @@
     justify-content: space-between;
     align-items: center;
     padding: 62px 97px;
+
+    @include tablet {
+      flex-direction: column;
+      padding: 40px 10px;
+      gap: 30px;
+    }
+
+    @include mobile {
+      text-align: center;
+      padding: 30px 10px;
+    }
   }
 
   &__text {
     font-weight: 500;
     font-size: 40px;
     line-height: 47px;
+
+    @include tablet {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+    }
   }
 }

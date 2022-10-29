@@ -1,29 +1,52 @@
+@use '../abstracts/mixins' as *;
+
 .product {
   &__container {
     display: flex;
     padding-top: 111px;
     gap: 20px;
     flex-wrap: wrap;
+
+    @include tablet {
+      padding: 50px 0 0;
+    }
+
+    @include mobile {
+      padding: 30px 0 0;
+    }
   }
 
   &__card {
-    position: relative;
-    padding: 60px 40px 60px;
+    display: flex;
+    justify-content: right;
     flex: 1 1 calc(50% - 20px);
+    padding: 60px 40px 60px;
+    
+    @include tablet {
+      flex: 1 1 100%;
+      padding: 40px 20px;
+    }
+
+    @include mobile {
+      padding: 30px 15px;
+    }
 
     &-text {
-      position: relative;
-      right: 0;
-      left: 50%;
       display: flex;
       max-width: 50%;
       flex-direction: column;
-
+      
       h4 {
         margin-bottom: 20px;
         font-weight: 500;
         font-size: 30px;
         line-height: 35px;
+      }
+
+      @include mobile {
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 10px;
       }
 
       p {
@@ -32,6 +55,10 @@
         font-size: 16px;
         line-height: 19px;
         opacity: 0.7;
+      }
+
+      @include mobile {
+        font-size: 12px;
       }
 
       &_price {
@@ -61,6 +88,12 @@
         padding: 13px 25px;
         font-size: 12px;
         line-height: 14px;
+
+        @include mobile {
+          padding: 10px 20px;
+          font-size: 10px;
+          line-height: 10px;
+        }
       }
     }
   }
@@ -95,6 +128,5 @@
 }
 
 .text_reverse {
-  left: 0;
-  right: 50%;
+  justify-content: left;
 }

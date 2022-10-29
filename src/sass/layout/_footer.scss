@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .footer {
   &__container {
     display: flex;
@@ -5,27 +7,67 @@
     align-items: center;
     padding-top: 126px;
     padding-bottom: 126px;
-    gap: 50px;
+    gap: 40px;
+
+    @include tablet {
+      flex-direction: column;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      gap: 0;
+    }
+
+    @include mobile {
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
   }
 
   &__logo {
     position: relative;
     display: flex;
     flex-direction: column;
-    top: -30px;
+    top: 0;
+
+    @include tablet {
+      top: 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      margin-top: 20px;
+      order: 1;
+      border-top: 1px dotted rgb(246, 118, 44, 0.4);
+    }
 
     img {
       position: relative;
-      top: 20px;
-      left: -50px;
+      top: 0px;
+      left: -30px;
+
+      @include tablet {
+        left: 0;
+        top: 5px;
+      }
     }
 
-    &-email {
+    &-contacts {
+      transform: translateY(-20px);
+
+      @include tablet {
+        transform: translateY(0);
+      }
+    }
+
+    &-contacts_email {
       display: flex;
       align-items: center;
       margin-bottom: 9px;
       gap: 7px;
       flex-wrap: wrap;
+
+      @include mobile {
+        justify-content: center;
+      }
 
       a {
         font-weight: 400;
@@ -36,11 +78,15 @@
       }
     }
 
-    &-site {
+    &-contacts_site {
       display: flex;
       align-items: center;
       gap: 7px;
       flex-wrap: wrap;
+
+      @include mobile {
+        justify-content: center;
+      }
 
       a {
         font-weight: 400;
@@ -56,20 +102,44 @@
     padding-right: 30px;
     flex-basis: calc(80% - 50px);
 
+    @include tablet {
+      padding-right: 0;
+    }
+
     &_primary {
       display: flex;
       justify-content: space-between;
+      gap: 30px;
+
+      @include tablet {
+        flex-wrap: wrap;
+        text-align: center;
+      }
+
+      @include tablet {
+        &-item {
+          flex: 1 1 calc(50% - 30px);  
+        }
+      }
 
       &-item a {
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
         color: #ffffff;
+
+        @include tablet {
+          text-decoration: underline dotted rgb(246, 118, 44, 0.4);
+        }
       }
     }
 
     &_secondary {
       margin-top: 14px;
+
+      @include tablet {
+        margin-top: 10px;
+      }
     }
 
     &_secondary li>a {
@@ -78,10 +148,20 @@
       font-size: 12px;
       line-height: 14px;
       opacity: 0.8;
+
+      @include tablet {
+        font-size: 14px;
+        line-height: 10px;
+        text-decoration: none;
+      }
     }
 
     &_secondary *+* {
       margin-top: 14px;
+
+      @include tablet {
+        margin-top: 8px;
+      }
     }
 
     &_secondary-social {
@@ -89,6 +169,10 @@
       align-items: center;
       gap: 10px;
       flex-direction: row;
+
+      @include tablet {
+        flex-direction: column;
+      }
 
       & *+* {
         margin-top: 0;

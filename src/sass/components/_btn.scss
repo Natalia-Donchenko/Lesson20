@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .btn {
   width: max-content;
   height: max-content;
@@ -11,7 +13,18 @@
   font-size: 16px;
   line-height: 19px;
   color: #fff;
+  
+  @include tablet {
+    padding: 13px 30px;
+    font-size: 14px;
+    line-height: 15px;
+  }
 
+  @include mobile {
+    padding: 10px 20px;
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 .btn:hover {
