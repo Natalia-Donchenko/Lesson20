@@ -39,6 +39,7 @@
 
     &-item:hover {
       transform: scale(1.2);
+      cursor: pointer;
     }
   }
 }
@@ -77,4 +78,5 @@
       opacity: 0.7;
     }
   }
+
 }

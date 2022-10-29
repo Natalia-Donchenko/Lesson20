@@ -7,13 +7,11 @@
   white-space: nowrap;
   text-transform: uppercase;
   transition: transform 0.1s linear;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
 
-  a {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #fff;
-  }
 }
 
 .btn:hover {

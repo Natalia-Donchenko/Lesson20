@@ -418,6 +418,7 @@ a {
 }
 .menu__items-item:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 .hero__section {
@@ -572,6 +573,7 @@ a {
 }
 .food-list__cards .card:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 .order {
@@ -689,8 +691,6 @@ a {
 }
 .product__card-text .btn {
   padding: 13px 25px;
-}
-.product__card-text .btn a {
   font-size: 12px;
   line-height: 14px;
 }
@@ -881,8 +881,6 @@ a {
   white-space: nowrap;
   text-transform: uppercase;
   transition: transform 0.1s linear;
-}
-.btn a {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
