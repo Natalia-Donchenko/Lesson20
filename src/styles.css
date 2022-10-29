@@ -548,8 +548,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 126px;
-  padding-bottom: 126px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   gap: 40px;
 }
 @media (max-width: 768px) {
